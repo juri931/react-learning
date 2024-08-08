@@ -35,3 +35,17 @@ function createGreeting() {
   return "Hi, I am " + userName + ". " + message;
 }
 console.log(createGreeting());
+
+// Functions (ESERCIZIO DEL CORSO)
+//
+// Exercise: Working with Functions
+// Your task is to write a new function that should be named combine and have the following characteristics:
+// - Accept three input values
+// - Calculate a new value based on the three input values: a * b / c (if a, b & c are the input values)
+// - Return the calculated result
+//
+function combine(a = 10, b = 20, c = 2) {
+  return (a * b) / c;
+}
+
+console.log(combine());
