@@ -1,5 +1,15 @@
-import utils, { apiKey, example } from "./utils";
+// Basic import examples:
 
-console.log(apiKey); // Leggo la variabile dichiarata
-console.log(utils); // Leggo il valore univoco export default
-console.log(example);
+// import utils, { apiKey, example } from "./utils";
+
+// console.log(apiKey); // Leggo la variabile dichiarata
+// console.log(utils); // Leggo il valore univoco export default
+// console.log(example); // Leggo la seconda variabile importata
+
+// ------------------------------------------ //
+
+// Import all variables at once
+import * as utils from "./utils";
+console.log(utils.apiKey); // Leggo il valore scelto da utils
+console.log(utils.default); // Leggo il valore default
+console.log(utils.example); // Leggo la seconda variabile
