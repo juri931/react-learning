@@ -18,11 +18,20 @@
 
 // ------------------------------------------ //
 
-// Functions
+// Functions (ESEMPIO IN CONSOLE.LOG)
 function greetUser(userName, message = "Hello!") {
   // Si può dare un valore ad una variabile direttamente al momento della chiamata
   console.log(message, userName);
 }
-
 greetUser("Max");
 greetUser("Max", "How are you today?"); // in questo modo sostituirà il valore già dichiarato con un valore custom
+
+//
+
+// Functions (ESEMPIO CON RETURN)
+function createGreeting() {
+  let userName = "Juri";
+  let message = "How are you doing?";
+  return "Hi, I am " + userName + ". " + message;
+}
+console.log(createGreeting());
