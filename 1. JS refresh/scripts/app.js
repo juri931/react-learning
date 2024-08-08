@@ -37,11 +37,12 @@ function createGreeting() {
 console.log(createGreeting());
 
 // Nameless Arrow Functions
-// Si utilizzano per creare delle funzioni sul momento
-export default (userName = "Marco", message = "I'm a web developer!") => {
-  console.log("Hello");
-  return userName + message;
-};
+// Si utilizzano per creare delle funzioni sul momento.
+(userName = "Marco ", message = "And I'm a web developer!") =>
+  "Hello, I am " + userName + message;
+// NOTE:
+// Se bisogna dichiarare più di una variabile, bisogna usare le parentesi (come sopra), altrimenti non serve usarle in caso di una sola variabile.
+// Se una arrow function contiene solo un return come risultato, si può omettere così come le graffe (come sopra).
 
 // Functions (ESERCIZIO DEL CORSO)
 //
