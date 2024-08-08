@@ -36,6 +36,13 @@ function createGreeting() {
 }
 console.log(createGreeting());
 
+// Nameless Arrow Functions
+// Si utilizzano per creare delle funzioni sul momento
+export default (userName = "Marco", message = "I'm a web developer!") => {
+  console.log("Hello");
+  return userName + message;
+};
+
 // Functions (ESERCIZIO DEL CORSO)
 //
 // Exercise: Working with Functions
