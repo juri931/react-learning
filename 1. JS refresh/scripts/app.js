@@ -40,9 +40,13 @@ console.log(createGreeting());
 // Si utilizzano per creare delle funzioni sul momento.
 (userName = "Marco ", message = "And I'm a web developer!") =>
   "Hello, I am " + userName + message;
+
 // NOTE:
-// Se bisogna dichiarare più di una variabile, bisogna usare le parentesi (come sopra), altrimenti non serve usarle in caso di una sola variabile.
-// Se una arrow function contiene solo un return come risultato, si può omettere così come le graffe (come sopra).
+// - Se bisogna dichiarare più di una variabile, bisogna usare le parentesi (come sopra), altrimenti non serve usarle in caso di una sola variabile.
+// - Se una arrow function contiene solo un return come risultato, si può omettere così come le graffe (come sopra).
+// - Nel caso di un oggetto, dobbiamo inserirlo nelle parentesi per far si che JS lo legga, ad es: number => ({ age: number });
+
+//
 
 // Functions (ESERCIZIO DEL CORSO)
 //
