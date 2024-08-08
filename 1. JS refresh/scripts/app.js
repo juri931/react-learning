@@ -13,3 +13,5 @@ import * as utils from "./utils";
 console.log(utils.apiKey); // Leggo il valore scelto da utils
 console.log(utils.default); // Leggo il valore default
 console.log(utils.example); // Leggo la seconda variabile
+
+console.log(utils); // Mi darà il modulo intero e tutto ciò che contiene
