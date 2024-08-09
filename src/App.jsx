@@ -1,10 +1,21 @@
+// Creating and Using Dynamic Values
+const reactDescriptions = ["Fundamental", "Crucial", "Core"];
+
+function genRandomInt(max) {
+  return Math.floor(Math.random() * (max + 1));
+}
+
+// Components MUST start with Uppercase letter!
 function Header() {
+  const description = reactDescriptions[genRandomInt(2)];
+
   return (
     <header>
       <img src="src/assets/react-core-concepts.png" alt="Stylized atom" />
       <h1>React Essentials</h1>
       <p>
-        Fundamental React concepts you will need for almost any app you are
+        {/* Adding the dynamic value */}
+        {description} React concepts you will need for almost any app you are
         going to build!
       </p>
     </header>
