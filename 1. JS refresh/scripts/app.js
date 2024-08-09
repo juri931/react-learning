@@ -132,3 +132,34 @@ function transformToObjects(numberArray) {
   // should return an array of objects
   return numberArray.map((item) => ({ val: item })); // Soluzione
 }
+
+// ------------------------------------------ //
+
+// Destructuring Arrays
+const [firstName, lastName] = ["Max", "Black"];
+
+console.log(firstName);
+console.log(lastName);
+
+// Destructuring Objects
+const { name: userName, age } = { name: "Max", age: 25 };
+console.log(userName);
+console.log(age);
+
+// Destructuring a function parameter lists
+// Here's an example:
+
+// function storeOrder(order) {
+//   localStorage.setItem("id", order.id);
+//   localStorage.setItem("currency", order.currency);
+//}
+// Instead of accessing the order properties via the "dot notation" inside the storeOrder function body, you could use destructuring like this:
+
+function storeOrder({ id, currency }) {
+  // destructuring
+  localStorage.setItem("id", id);
+  localStorage.setItem("currency", currency);
+}
+// The destructuring syntax is the same as taught in the previous lecture - just without creating a constant or variable manually.
+
+// Instead, id and currency are "pulled out" of the incoming object (i.e., the object passed as an argument to storeOrder).
