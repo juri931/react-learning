@@ -163,3 +163,19 @@ function storeOrder({ id, currency }) {
 // The destructuring syntax is the same as taught in the previous lecture - just without creating a constant or variable manually.
 
 // Instead, id and currency are "pulled out" of the incoming object (i.e., the object passed as an argument to storeOrder).
+
+// ------------------------------------------ //
+
+// Spread operator
+// Arrays
+const newHobbies = ["Snowboard", "Climbing"];
+
+const mergedHobbies = [...hobbies, ...newHobbies];
+console.log(mergedHobbies);
+
+// Objects
+const extendedUser = {
+  isAdmin: true,
+  ...user1,
+};
+console.log(extendedUser);
