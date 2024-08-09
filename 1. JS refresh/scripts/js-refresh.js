@@ -199,3 +199,20 @@ console.log(extendedUser);
 for (const hobby of hobbies) {
   console.log(hobby);
 }
+
+// ------------------------------------------ //
+// Using functions as values
+function handleTimeout() {
+  console.log("2s Timed out!");
+}
+
+const handleTimeout2 = () => {
+  console.log("3s Timed out... Again!");
+};
+
+setTimeout(handleTimeout, 2000);
+setTimeout(handleTimeout2, 3000);
+// Può essere usato anche con una funzione anonima
+setTimeout(() => {
+  console.log("4s More timing out...");
+}, 4000);
