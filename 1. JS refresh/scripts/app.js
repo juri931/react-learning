@@ -124,3 +124,11 @@ console.log(editedHobbies);
 // Trasformo l'item in un oggetto
 const editedHobbies2 = hobbies.map((item) => ({ text: item }));
 console.log(editedHobbies2);
+
+// ESERCIZIO DEL CORSO
+// Trasformare in un array di oggetti
+function transformToObjects(numberArray) {
+  // Todo: Add your logic
+  // should return an array of objects
+  return numberArray.map((item) => ({ val: item })); // Soluzione
+}
