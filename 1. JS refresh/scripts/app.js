@@ -61,3 +61,36 @@ function combine(a = 10, b = 20, c = 2) {
 }
 
 console.log(combine());
+
+// ------------------------------------------ //
+
+// OBJECTS
+const user = {
+  name: "Max",
+  age: 28,
+  greet() {
+    console.log("Hello, I'm in an object!");
+    console.log("And my name is " + this.name);
+  },
+};
+
+console.log(user);
+console.log(user.name);
+console.log(user.age);
+
+user.greet();
+
+// CLASS + CONSTRUCTOR
+class User {
+  constructor(name, age) {
+    this.name = name;
+    this.age = age;
+  }
+
+  greet() {
+    console.log("Hi, I'm in a class inside a constructor!");
+  }
+}
+
+const user1 = new User("John", 25);
+console.log(user1);
