@@ -80,7 +80,7 @@ console.log(user.age);
 
 user.greet();
 
-// CLASS + CONSTRUCTOR
+// Class + Constructor
 class User {
   constructor(name, age) {
     this.name = name;
@@ -94,3 +94,33 @@ class User {
 
 const user1 = new User("John", 25);
 console.log(user1);
+
+// ------------------------------------------ //
+
+// Arrays and Methods
+const hobbies = ["Sports", "Cooking", "Reading"];
+console.log(hobbies);
+console.log(hobbies[0]);
+
+hobbies.push("Gaming");
+console.log(hobbies);
+
+// Find index method
+//
+// Versione lunga
+// const index = hobbies.findIndex((item) => {
+//   return item === "Gaming";
+// });
+//
+// Versione corta
+const index = hobbies.findIndex((item) => item === "Gaming");
+
+console.log("L'indice dell'elemento richiesto è: " + index);
+
+// Metodo map
+const editedHobbies = hobbies.map((item) => item + "!");
+console.log(editedHobbies);
+
+// Trasformo l'item in un oggetto
+const editedHobbies2 = hobbies.map((item) => ({ text: item }));
+console.log(editedHobbies2);
