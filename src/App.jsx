@@ -1,3 +1,6 @@
+// Image importing
+import reactImg from "./assets/react-core-concepts.png";
+
 // Creating and Using Dynamic Values
 const reactDescriptions = ["Fundamental", "Crucial", "Core"];
 
@@ -11,7 +14,7 @@ function Header() {
 
   return (
     <header>
-      <img src="src/assets/react-core-concepts.png" alt="Stylized atom" />
+      <img src={reactImg} alt="Stylized atom" />
       <h1>React Essentials</h1>
       <p>
         {/* Adding the dynamic value */}
