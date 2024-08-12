@@ -1,5 +1,5 @@
 // Essential imports
-import { CORE_CONCEPTS } from "../../data";
+import { CORE_CONCEPTS, EXAMPLES } from "../../data";
 import CoreConcept from "../CoreConcept/CoreConcept";
 import TabButton from "../TabButton/TabButton";
 import "./Main.css";
@@ -7,7 +7,7 @@ import { useState } from "react";
 
 export default function Main() {
   // useState
-  const [selectedTopic, setSelectedTopic] = useState("Please click a button");
+  const [selectedTopic, setSelectedTopic] = useState("components");
   // Click Handler
   function handleClick(selectedButton) {
     setSelectedTopic(selectedButton);
@@ -34,20 +34,26 @@ export default function Main() {
         <menu>
           {/* Click events */}
           <TabButton
-            click={() => handleClick("Components")}
+            click={() => handleClick("components")}
             label="Components"
           ></TabButton>
-          <TabButton click={() => handleClick("JSX")} label="JSX"></TabButton>
+          <TabButton click={() => handleClick("jsx")} label="JSX"></TabButton>
           <TabButton
-            click={() => handleClick("Props")}
+            click={() => handleClick("props")}
             label="Props"
           ></TabButton>
           <TabButton
-            click={() => handleClick("State")}
+            click={() => handleClick("state")}
             label="State"
           ></TabButton>
         </menu>
-        {selectedTopic}
+        <div id="tab-content">
+          <h3>{EXAMPLES[selectedTopic].title}</h3>
+          <p>{EXAMPLES[selectedTopic].description}</p>
+          <pre>
+            <code>{EXAMPLES[selectedTopic].code}</code>
+          </pre>
+        </div>
       </section>
     </main>
   );
