@@ -1,6 +1,7 @@
 // Essential imports
 import { CORE_CONCEPTS } from "../../data";
 import CoreConcept from "../CoreConcept/CoreConcept";
+import TabButton from "../TabButton/TabButton";
 import "./Main.css";
 
 export default function Main() {
@@ -20,6 +21,15 @@ export default function Main() {
             image={CORE_CONCEPTS[3].image}
           />
         </ul>
+      </section>
+      <section id="examples">
+        <h2>Examples</h2>
+        <menu>
+          <TabButton label="Components"></TabButton>
+          <TabButton label="JSX"></TabButton>
+          <TabButton label="Props"></TabButton>
+          <TabButton label="State"></TabButton>
+        </menu>
       </section>
     </main>
   );
