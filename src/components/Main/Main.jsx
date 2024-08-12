@@ -7,7 +7,7 @@ import { useState } from "react";
 
 export default function Main() {
   // useState
-  const [selectedTopic, setSelectedTopic] = useState("components");
+  const [selectedTopic, setSelectedTopic] = useState();
   // Click Handler
   function handleClick(selectedButton) {
     setSelectedTopic(selectedButton);
@@ -47,13 +47,18 @@ export default function Main() {
             label="State"
           ></TabButton>
         </menu>
-        <div id="tab-content">
-          <h3>{EXAMPLES[selectedTopic].title}</h3>
-          <p>{EXAMPLES[selectedTopic].description}</p>
-          <pre>
-            <code>{EXAMPLES[selectedTopic].code}</code>
-          </pre>
-        </div>
+        {/* Rendering Content Conditionally */}
+        {!selectedTopic ? (
+          <p>Please select a topic</p>
+        ) : (
+          <div id="tab-content">
+            <h3>{EXAMPLES[selectedTopic].title}</h3>
+            <p>{EXAMPLES[selectedTopic].description}</p>
+            <pre>
+              <code>{EXAMPLES[selectedTopic].code}</code>
+            </pre>
+          </div>
+        )}
       </section>
     </main>
   );
