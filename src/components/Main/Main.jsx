@@ -34,15 +34,22 @@ export default function Main() {
         <menu>
           {/* Click events */}
           <TabButton
+            active={selectedTopic === "components"}
             click={() => handleClick("components")}
             label="Components"
           ></TabButton>
-          <TabButton click={() => handleClick("jsx")} label="JSX"></TabButton>
           <TabButton
+            active={selectedTopic === "jsx"}
+            click={() => handleClick("jsx")}
+            label="JSX"
+          ></TabButton>
+          <TabButton
+            active={selectedTopic === "props"}
             click={() => handleClick("props")}
             label="Props"
           ></TabButton>
           <TabButton
+            active={selectedTopic === "state"}
             click={() => handleClick("state")}
             label="State"
           ></TabButton>
