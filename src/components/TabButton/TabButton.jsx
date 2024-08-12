@@ -1,7 +1,7 @@
-export default function TabButton({ label }) {
+export default function TabButton({ label, click }) {
   return (
     <li>
-      <button>{label}</button>
+      <button onClick={click}>{label}</button>
     </li>
   );
 }

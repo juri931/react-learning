@@ -3,8 +3,15 @@ import { CORE_CONCEPTS } from "../../data";
 import CoreConcept from "../CoreConcept/CoreConcept";
 import TabButton from "../TabButton/TabButton";
 import "./Main.css";
+import { useState } from "react";
 
 export default function Main() {
+  // useState
+  const [selectedTopic, setSelectedTopic] = useState("Please click a button");
+  // Click Handler
+  function handleClick(selectedButton) {
+    setSelectedTopic(selectedButton);
+  }
   return (
     <main>
       <section id="core-concepts">
@@ -25,11 +32,22 @@ export default function Main() {
       <section id="examples">
         <h2>Examples</h2>
         <menu>
-          <TabButton label="Components"></TabButton>
-          <TabButton label="JSX"></TabButton>
-          <TabButton label="Props"></TabButton>
-          <TabButton label="State"></TabButton>
+          {/* Click events */}
+          <TabButton
+            click={() => handleClick("Components")}
+            label="Components"
+          ></TabButton>
+          <TabButton click={() => handleClick("JSX")} label="JSX"></TabButton>
+          <TabButton
+            click={() => handleClick("Props")}
+            label="Props"
+          ></TabButton>
+          <TabButton
+            click={() => handleClick("State")}
+            label="State"
+          ></TabButton>
         </menu>
+        {selectedTopic}
       </section>
     </main>
   );
