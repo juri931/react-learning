@@ -1,3 +1,5 @@
+import "./CoreConcept.css";
+
 // Props w/ shorthand
 {
   /* No more CoreConcept(props) but ({prop1, prop2, prop3}) */

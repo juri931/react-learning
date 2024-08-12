@@ -1,6 +1,7 @@
 // Essential imports
-import { CORE_CONCEPTS } from "../data";
-import CoreConcept from "./CoreConcept";
+import { CORE_CONCEPTS } from "../../data";
+import CoreConcept from "../CoreConcept/CoreConcept";
+import "./Main.css";
 
 export default function Main() {
   return (

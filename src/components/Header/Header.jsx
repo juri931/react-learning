@@ -1,5 +1,6 @@
-import reactImg from "../assets/react-core-concepts.png";
-
+import reactImg from "../../assets/react-core-concepts.png";
+// CSS
+import "./Header.css";
 // Creating and Using Dynamic Values
 const reactDescriptions = ["Fundamental", "Crucial", "Core"];
 
