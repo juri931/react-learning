@@ -32,7 +32,7 @@ export default function Examples() {
   return (
     <Section id="examples" title="Examples">
       <Tabs
-        ContainerType="menu"
+        // ContainerType="menu" not used because default prop value is already 'menu' in Tabs.jsx
         buttons={
           <>
             {/* Click events */}
