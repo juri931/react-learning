@@ -35,6 +35,7 @@ export default function Main() {
           ))}
         </ul>
       </section>
+
       <section id="examples">
         <h2>Examples</h2>
         <menu>
@@ -60,6 +61,7 @@ export default function Main() {
             label="State"
           ></TabButton>
         </menu>
+
         {/* Rendering Content Conditionally */}
         {!selectedTopic ? (
           <p>Please select a topic</p>
