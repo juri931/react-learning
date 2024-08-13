@@ -32,6 +32,7 @@ export default function Examples() {
   return (
     <Section id="examples" title="Examples">
       <Tabs
+        ContainerType="menu"
         buttons={
           <>
             {/* Click events */}

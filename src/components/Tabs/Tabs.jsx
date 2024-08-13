@@ -1,7 +1,8 @@
-export default function Tabs({ buttons, children }) {
+// Setting Component Types Dynamically
+export default function Tabs({ buttons, children, ContainerType }) {
   return (
     <>
-      <menu>{buttons}</menu>
+      <ContainerType>{buttons}</ContainerType>
       {children}
     </>
   );
