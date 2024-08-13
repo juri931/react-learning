@@ -1,9 +1,10 @@
 import CoreConcept from "./CoreConcept";
 import { CORE_CONCEPTS } from "../../data";
+import Section from "../Section/Section";
 
 export default function CoreConcepts() {
   return (
-    <section id="core-concepts">
+    <Section id="core-concepts">
       <h2>Core Concepts</h2>
       <ul>
         {/* Props importing w/ shorthand */}
@@ -23,6 +24,6 @@ export default function CoreConcepts() {
           <CoreConcept key={item.title} {...item} />
         ))}
       </ul>
-    </section>
+    </Section>
   );
 }
