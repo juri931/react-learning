@@ -4,7 +4,7 @@ export default function Player({ name, symbol }) {
   const [isEditing, setIsEditing] = useState(false)
 
   function handleEditButton() {
-    setIsEditing(!isEditing)
+    setIsEditing(editing => !editing) // Not using !isEditing for better working button
   }
 
   let playerName = <span className="player-name">{name}</span>
