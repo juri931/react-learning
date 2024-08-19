@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { styled } from 'styled-components'
 
 import Button from './Button';
-import Input from './Input';
+import Input from './Input.jsx';
 
 const ControlContainer = styled.div`
   display: flex;
@@ -37,13 +37,13 @@ export default function AuthInputs() {
         <Input
           label='Email'
           type="email"
-          $invalid={emailNotValid}
+          invalid={emailNotValid}
           onChange={(event) => handleInputChange('email', event.target.value)}
         />
         <Input
           label='Password'
           type="password"
-          $invalid={passwordNotValid}
+          invalid={passwordNotValid}
           onChange={(event) =>
             handleInputChange('password', event.target.value)
           }
