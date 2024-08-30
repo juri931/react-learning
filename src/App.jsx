@@ -56,7 +56,9 @@ function App() {
 
   }
 
-  let content = <SelectedProject />
+  const selectedProject = projectState.projects.find(project => project.id === projectState.selectedProjectId)
+
+  let content = <SelectedProject project={selectedProject} />
 
   if (projectState.selectedProjectId === null) {
     content = <NewProject onAdd={handleAddProject} onCancel={handleCancelAddProject} />

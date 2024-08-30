@@ -24,10 +24,10 @@ export default function ProjectsSidebar({
           cssClasses += ' text-stone-400'
         }
 
-        <li li key={project.id}>
+        return <li li key={project.id}>
           <button
             className={cssClasses}
-            onClick={onSelectProject}
+            onClick={() => onSelectProject(project.id)}
           >
             {project.title}
           </button>
