@@ -13,8 +13,10 @@ function App() {
   const [availablePlaces, setAvailablePlaces] = useState([])
   const [pickedPlaces, setPickedPlaces] = useState([]);
 
+  // Get user's location
   useEffect(() => {
     navigator.geolocation.getCurrentPosition((position) => {
+      // Sort places by user's distance
       const sortedPlaces = sortPlacesByDistance(
         AVAILABLE_PLACES,
         position.coords.latitude,
@@ -42,6 +44,14 @@ function App() {
       const place = AVAILABLE_PLACES.find((place) => place.id === id);
       return [place, ...prevPickedPlaces];
     });
+
+    // Storing the user's location in local storage
+    const storedIds = JSON.parse(localStorage.setItem('selectedPlaces')) || []
+    if (storedIds.indexOf(id) === -1) {
+      localStorage.setItem(
+        'selectedPlaces',
+        JSON.stringify([id, ...storedIds]))
+    }
   }
 
   function handleRemovePlace() {
