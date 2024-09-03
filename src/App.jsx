@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react';
+import { useCallback, useEffect, useRef, useState } from 'react';
 
 import Places from './components/Places.jsx';
 import { AVAILABLE_PLACES } from './data.js';
@@ -61,7 +61,8 @@ function App() {
     }
   }
 
-  function handleRemovePlace() {
+  // Wrapping a function in useCallback avoid an infinite loop
+  const handleRemovePlace = useCallback(function handleRemovePlace() {
     setPickedPlaces((prevPickedPlaces) =>
       prevPickedPlaces.filter((place) => place.id !== selectedPlace.current)
     );
@@ -76,7 +77,8 @@ function App() {
           (id) => id !== selectedPlace.current)
       )
     )
-  }
+  }, [])
+
 
   return (
     <>
