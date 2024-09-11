@@ -2,12 +2,17 @@ export default function Signup() {
   function handleSubmit(event) {
     event.preventDefault();
 
+    // Get form data entry
     const fd = new FormData(event.target);
     const data = Object.fromEntries(fd.entries());
+    // Get form multiple choice
     const acquisitionChannel = fd.getAll("acquisition");
-
     data.acquisition = acquisitionChannel;
+
     console.log(data);
+
+    // Reset form
+    event.target.reset();
   }
 
   return (
