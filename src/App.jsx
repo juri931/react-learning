@@ -1,13 +1,13 @@
 import Header from "./components/Header.jsx";
 // Using StateLogin (useState) for form validation
-import Login from "./components/StateLogin.jsx";
+import Signup from "./components/Signup";
 
 function App() {
   return (
     <>
       <Header />
       <main>
-        <Login />
+        <Signup />
       </main>
     </>
   );
