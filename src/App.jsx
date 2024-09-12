@@ -1,16 +1,9 @@
-import Header from "./components/Header.jsx";
-// Using StateLogin (useState) for form validation
-import Signup from "./components/Signup";
-// Using Login for code improvement
-import Login from "./components/StateLogin";
-
 function App() {
   return (
     <>
-      <Header />
-      <main>
-        <Login />
-      </main>
+      <h1>You got this 💪</h1>
+      <p>Stuck? Not sure how to proceed?</p>
+      <p>Don't worry - we've all been there. Let's build it together!</p>
     </>
   );
 }
