@@ -1,4 +1,4 @@
-import { createContext, useReducer } from "react";
+import { createContext, useMemo, useReducer } from "react";
 
 const CartContext = createContext({
   items: [],
@@ -62,7 +62,10 @@ export function CartContextProvider({ children }) {
     dispatchCartAction({ type: "REMOVE_ITEM", id });
   }
 
-  const cartContext = { items: cart.items, addItem, removeItem };
+  const cartContext = useMemo(
+    () => ({ items: cart.items, addItem, removeItem }),
+    [cart.items, addItem, removeItem]
+  );
 
   return (
     <CartContext.Provider value={cartContext}>{children}</CartContext.Provider>
